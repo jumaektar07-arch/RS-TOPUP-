@@ -22,9 +22,9 @@ const server = http.createServer((req, res) => {
   // Decode URL and remove query strings
   let safeUrl = decodeURI(req.url.split('?')[0]);
 
-  // Route root '/' or '/index.html' directly to 'FFX.html'
+  // Route root '/' or '/index.html' directly to 'index.html'
   if (safeUrl === '/' || safeUrl === '' || safeUrl === '/index.html') {
-    safeUrl = '/FFX.html';
+    safeUrl = '/index.html';
   }
 
   // Prevent directory traversal
